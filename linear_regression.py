@@ -30,7 +30,6 @@ try:
 except Exception as e:
     raise RuntimeError(f"Ошибка при чтении файла: {e}")
 
-columns = np.genfromtxt(filename, skip_header=1).T
 X = columns[1:4].copy().T # независимые переменные
 Y = columns[4].copy() # зависимая переменная
 
